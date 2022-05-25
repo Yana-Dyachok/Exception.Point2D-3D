@@ -10,7 +10,7 @@ protected:
 	double dimension;//розмірність
 public:
 	Point() {
-		x = 0; y = 0;  dimension = 0;
+		x = 0; y = 0;  dimension = 2;
 	}
 
 
@@ -21,7 +21,7 @@ public:
 
 
 	void Output() {//метод виведення
-		cout << "In Point2D x= " << x <<'\t' << " y= " << y << endl;
+		cout << "In Point2D x= " << x <<'\t' << " y= " << y<<'\t' <<"dimension="<<dimension<<endl;
 	}
 
 
@@ -34,7 +34,7 @@ protected:
 	double X,Y,Z;//координати точок 3D
 public:
 	Point3D() {
-		X= 0; Y = 0; Z = 0;
+		X= 0; Y = 0; Z = 0; dimension = 3;
 	}
 
 
@@ -45,7 +45,7 @@ public:
 
 
 	void Output3D()  {//метод виведення
-		cout << "In Point3D x= " << X << '\t' << " y= " << Y << '\t' << " z= " << Z << endl;
+		cout << "In Point3D x= " << X << '\t' << " y= " << Y << '\t' << " z= " << Z <<'\t' <<"dimension="<<dimension<< endl;
 	}
 
 	~Point3D() {}
@@ -62,8 +62,7 @@ public:
 
 
 	double getDimension() {//знаходимо довжину відрізка
-		dimension = sqrt(pow((X - x), 2) + pow((Y-y), 2)+ pow((Z - 0), 2));//оскільки точка в Point знаходиться в 2D, то координата z=0
-		return dimension;
+		return sqrt(pow((X - x), 2) + pow((Y-y), 2)+ pow((Z - 0), 2));//оскільки точка в Point знаходиться в 2D, то координата z=0	
 	}
 
 
